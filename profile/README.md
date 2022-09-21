@@ -6,7 +6,7 @@ Wolfi is a community Linux OS designed for the container and cloud-native era. C
 
 Wolfi is a stripped-down distro designed for the cloud-native era. It doesn't have a kernel of its own, instead relying on the environment (such as the container runtime) to provide one. This separation of concerns in Wolfi means it is adaptable to a range of environments.
 
-## Wolfi Features
+# Wolfi Features
 
 Wolfi, whose name was inspired by the [world's smallest octopus](https://en.wikipedia.org/wiki/Octopus_wolfi), has some key features that differentiates it from other distributions that focus on container/cloud-native environments:
 
@@ -16,21 +16,21 @@ Wolfi, whose name was inspired by the [world's smallest octopus](https://en.wiki
 - Fully declarative and reproducible build system
 - Designed to support glibc and musl 
 
-#FAQ
+# FAQ
 
-### What is Wolfi and how does it compare to Alpine?
+## What is Wolfi and how does it compare to Alpine?
 Wolfi is a Linux _undistro_  designed from the ground up to support newer computing paradigms such as containers. Although Wolfi has a few similar design principles as Alpine (such as using apk), it is a different distribution that is  focused on supply chain security. Unlike Alpine, Wolfi does not currently build its own Linux kernel, instead relying on the host environment (e.g. a container runtime) to provide one.
 
-### Is Wolfi free to use?
+## Is Wolfi free to use?
 Yes, Wolfi is free and will always be.
 
-### Can I use Wolfi on the Desktop?
+## Can I use Wolfi on the Desktop?
 No. Wolfi is an un-distro, or distroless base to be used within the container / OCI ecosystem. Desktop distributions require additional software that is out of scope for Wolfi's roadmap.
 
-### Who maintains Wolfi?
+## Who maintains Wolfi?
 Wolfi was created and is currently maintained by [Chainguard](https://chainguard.dev).
 
-### What are the plans for long-term Wolfi governance?
+## What are the plans for long-term Wolfi governance?
 
 We intend for Wolfi to be a community-driven project, which means over time it will have multi-vendor governance and maintainers. For now we're focused on building the project and community, and will revisit this in several months when a community has formed.
 
