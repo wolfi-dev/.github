@@ -1,4 +1,4 @@
-![wolfi logo](https://github.com/distroless/.github/raw/main/profile/wolfi-logo.svg)
+![wolfi logo](https://github.com/wolfi-dev/.github/raw/main/profile/wolfi-logo.svg)
 
 # Wolfi OS
 
