@@ -17,6 +17,10 @@ Wolfi, whose name was inspired by the [world's smallest octopus](https://en.wiki
 - Fully declarative and reproducible build system
 - Designed to support glibc and musl 
 
+# Where's the Source?
+
+Coming soon to this Github organization. In the meantime find us at [chainguard-dev/wolfi-os](https://github.com/chainguard-dev/wolfi-os).
+
 # FAQ
 
 ## What is Wolfi and how does it compare to Alpine?
