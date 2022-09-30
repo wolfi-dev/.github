@@ -28,7 +28,7 @@ the Wolfi project.
 
 The present feeds offered are:
 
-* `[https://packages.wolfi.dev/os/security.json](https://packages.wolfi.dev/os/security.json)`,
+* [`https://packages.wolfi.dev/os/security.json`](https://packages.wolfi.dev/os/security.json),
   a feed for the production Wolfi `os` repository.
 
 These feeds contain a list of `package` objects under `packages`, which contain a mapping
