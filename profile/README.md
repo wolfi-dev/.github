@@ -19,7 +19,10 @@ Wolfi, whose name was inspired by the [world's smallest octopus](https://en.wiki
 
 # Where's the Source?
 
-Coming soon to this Github organization. In the meantime find us at [chainguard-dev/wolfi-os](https://github.com/chainguard-dev/wolfi-os).
+* [bootstrap-stage1](https://github.com/wolfi-dev/bootstrap-stage1) contains the stage1 bootstrap repository which is used with Alpine.
+* [bootstrap-stage2](https://github.com/wolfi-dev/bootstrap-stage2) contains the stage2 bootstrap repository which is used with Alpine and the stage1 toolchain to bootstrap stage3.
+* [bootstrap-stage3](https://github.com/wolfi-dev/bootstrap-stage3) contains the stage3 bootstrap repository which is a micro GNU/Linux distribution built with stage2 and used to bootstrap Wolfi.
+* [os](https://github.com/wolfi-dev/os) contains the core Wolfi OS repository.
 
 # FAQ
 
@@ -36,6 +39,7 @@ No. Wolfi is an un-distro, or distroless base to be used within the container / 
 Wolfi was created and is currently maintained by [Chainguard](https://chainguard.dev).
 
 ## What are the plans for long-term Wolfi governance?
-
 We intend for Wolfi to be a community-driven project, which means over time it will have multi-vendor governance and maintainers. For now we're focused on building the project and community, and will revisit this in several months when a community has formed.
 
+## Where can I get security feeds for Wolfi?
+See [SECURITY.md](/SECURITY.md) for information about reporting security incidents concerning and consuming security data about Wolfi.
