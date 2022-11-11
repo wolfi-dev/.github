@@ -1,7 +1,82 @@
 [
   {
-    "name": "test",
-    "description": null,
-    "color": "3e4b9e"
+    "name": "needs-triage",
+    "description": "applied to all new customer/user issues. Removed after triage occurs.",
+    "color": "#54c1f0"
+  },
+  {
+    "name": "blocked",
+    "description": "indicates there are blocking issues that need to be addressed before progress can be made",
+    "color": "#7a2f4e"
+  },
+  {
+    "name": "p0",
+    "description": "This issue is critical and should be worked on immediately. (fixed in days/weeks)",
+    "color": "#e88438"
+  },
+  {
+    "name": "p1",
+    "description": "This issue is very important and will be addressed within the team planning window (fixed in weeks/months)",
+    "color": "#e8e538"
+  },
+  {
+    "name": "p2",
+    "description": "This issue we intend to address but we have can live without it (fixed in months/quarters)",
+    "color": "#38e843"
+  },
+  {
+    "name": "q422",
+    "description": "",
+    "color": "#f49988"
+  },
+  {
+    "name": "q123",
+    "description": "",
+    "color": "#f49988"
+  },
+  {
+    "name": "q223",
+    "description": "",
+    "color": "#F49988"
+  },
+  {
+    "name": "q-next",
+    "description": "",
+    "color": "#db4253"
+  },
+  {
+    "name": "security",
+    "description": "a security sensitive issue",
+    "color": "#c70223"
+  },
+  {
+    "name": "cve",
+    "description": "known vulnerability detected",
+    "color": "#fa2302"
+  },
+  {
+    "name": "on-duty",
+    "description": "issues that should be handled during an on-duty shift",
+    "color": "#faee02"
+  },
+  {
+    "name": "incident",
+    "description": "production incident handled by on-call",
+    "color": "#fa2302"
+  },
+  {
+    "name": "post-mortem",
+    "description": "post-mortem related issues and PRs",
+    "color": "#c40866"
+  },
+  {
+    "name": "request-version-update",
+    "description": "request for a newer version of a package",
+    "color": "#6ded73"
+  },
+  {
+    "name": "roadmap",
+    "description": "used by teams to indicate issues that we want to represent in a roadmap view provided for sales/product. ETAs on these issues will be set at the start of a planning cycle and be updated weekly.",
+    "color": "#385be8"
   }
 ]
