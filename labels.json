@@ -78,5 +78,10 @@
     "name": "roadmap",
     "description": "used by teams to indicate issues that we represent in a customer roadmap view",
     "color": "385be8"
+  },
+  {
+    "name": "out-of-slo",
+    "description": "to mark an issue or pr out of the slo bot",
+    "color": "bcbcbc"
   }
 ]
