@@ -32,6 +32,9 @@ Wolfi is a Linux _undistro_  designed from the ground up to support newer comput
 ## Is Wolfi free to use?
 Yes, Wolfi is free and will always be.
 
+## Can I mix packages from Alpine repositories into a Wolfi-based image? 
+No, it’s not possible to mix Alpine apks with Wolfi apks. If your image requires dependencies that are currently only available for Alpine, you might consider opening a new issue in the [wolfi-os](https://github.com/chainguard-dev/wolfi-os/) repository to suggest the new package addition, or use [melange](https://github.com/chainguard-dev/melange) to build a custom apk for your image.
+
 ## Can I use Wolfi on the Desktop?
 No. Wolfi is an un-distro, or distroless base to be used within the container / OCI ecosystem. Desktop distributions require additional software that is out of scope for Wolfi's roadmap.
 
@@ -43,3 +46,51 @@ We intend for Wolfi to be a community-driven project, which means over time it w
 
 ## Where can I get security feeds for Wolfi?
 See [SECURITY.md](/SECURITY.md) for information about reporting security incidents concerning and consuming security data about Wolfi.
+
+# Get Started
+
+To get you up and running with Wolfi, let's go over a quick demo where you can create an image from a Dockerfile.
+
+We'll use a "Hello, World" style Python program to demonstrate:
+
+```python
+def main():
+    print("Hello, Wolfi!")
+
+if __name__ == "__main__":
+    main()
+```
+
+Within the same directory, you can create the Dockerfile. This Dockerfile will set up a new user, `WORKDIR`, and copy relevant files. It will also define the entry point that will be executed when we run this image with `docker run`. We are using the [wolfi-base image](https://github.com/chainguard-images/images/tree/main/images/wolfi-base) to build a Python image from scratch, using Wolfi apks.
+
+```docker
+FROM cgr.dev/chainguard/wolfi-base
+
+ARG version=3.11
+RUN adduser -D nonroot
+WORKDIR /app
+
+RUN apk add python-${version} && chown -R nonroot.nonroot /app/
+
+USER nonroot
+
+COPY  hello_wolfi.py /app/
+ENTRYPOINT [ "python", "hello_wolfi.py" ]
+```
+
+This Dockerfile uses a variable called `version` to define which Python version is going to be installed on the resulting image. You can change this to one of the available Python versions on the [wolfi-dev/os](https://github.com/wolfi-dev/os) repository.
+
+From here, you can build and run your image. If you run into issues with the `build` step, try using `sudo`.
+
+```sh
+docker build . -t hellowolfi
+docker run --rm hellowolfi
+```
+
+You should receive the following output: 
+
+```
+Hello, Wolfi!
+```
+
+For more guidance, you can check out a full tutorial on [Creating Wolfi Images with Dockerfiles](https://edu.chainguard.dev/open-source/wolfi/wolfi-with-dockerfiles/), or alternately use apko to build a distroless image with only the packages you need, by revieiwng a [Getting Started with apko](https://edu.chainguard.dev/open-source/apko/getting-started-with-apko/) tutorial.
