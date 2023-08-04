@@ -24,6 +24,10 @@ Wolfi, whose name was inspired by the [world's smallest octopus](https://en.wiki
 * [bootstrap-stage3](https://github.com/wolfi-dev/bootstrap-stage3) contains the stage3 bootstrap repository which is a micro GNU/Linux distribution built with stage2 and used to bootstrap Wolfi.
 * [os](https://github.com/wolfi-dev/os) contains the core Wolfi OS repository.
 
+# Get Involved
+
+The [community repo](https://github.com/wolfi-dev/community) contains details of our regular community calls, support forums and social media presence.
+
 # FAQ
 
 ## What is Wolfi and how does it compare to Alpine?
