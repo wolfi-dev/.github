@@ -2,6 +2,7 @@
 ![wolfi logo](https://github.com/wolfi-dev/.github/raw/main/profile/wolfi-logo-light-mode.svg#gh-light-mode-only)
 
 # Wolfi OS
+Wolfi is the first community Linux (un)distribution declaratively built for creating a secure base layer for your containers! 
 
 Wolfi is a community Linux OS designed for the container and cloud-native era. Chainguard started the Wolfi project to enable building [Chainguard Images](https://github.com/chainguard-images), our collection of curated [distroless](https://blog.chainguard.dev/minimal-container-images-towards-a-more-secure-future/) images that meet the requirements of a secure software supply chain. This required a Linux distribution with components at the appropriate granularity and with support for both [glibc](https://www.gnu.org/software/libc/) and [musl](https://www.musl-libc.org/), something that was not yet available in the cloud-native Linux ecosystem.
 
@@ -40,7 +41,7 @@ Yes, Wolfi is free and will always be.
 No, it’s not possible to mix Alpine apks with Wolfi apks. If your image requires dependencies that are currently only available for Alpine, you might consider opening a new issue in the [wolfi-os](https://github.com/chainguard-dev/wolfi-os/) repository to suggest the new package addition, or use [melange](https://github.com/chainguard-dev/melange) to build a custom apk for your image.
 
 ## Can I use Wolfi on the Desktop?
-No. Wolfi is an un-distro, or distroless base to be used within the container / OCI ecosystem. Desktop distributions require additional software that is out of scope for Wolfi's roadmap.
+No. Desktop distributions require additional software that is out of scope for Wolfi's roadmap.
 
 ## Who maintains Wolfi?
 Wolfi was created and is currently maintained by [Chainguard](https://chainguard.dev).
@@ -50,6 +51,22 @@ We intend for Wolfi to be a community-driven project, which means over time it w
 
 ## Where can I get security feeds for Wolfi?
 See [SECURITY.md](/SECURITY.md) for information about reporting security incidents concerning and consuming security data about Wolfi.
+
+## Where can I ask questions or learn more about using Wolfi?
+We have a monthly community call on the 1st Wednesday of every month! Join the next meeting by following Wolfi’s public calendar, or submit your question to our GitHub Community discussions forum. 
+
+# Wolfi Community
+
+| Resource    | Details, Links, etc. |
+| ----------- | ----------- |
+| Calendar    | Monthly Wolfi Community Call (1st Wednesday of Every Month) |
+| Calendar    | Monthly Wolfi Community Call (1st Wednesday of Every Month) - see [public Google Calendar](https://calendar.google.com/calendar/u/0/embed?src=c_7ec60f485931f9056040a3e24273400de41a143ec60703b411d77b1f534ec15f@group.calendar.google.com) |
+| Notes | View our [notes](https://docs.google.com/document/d/1wBE3W81Xso6BDOU3-tWzfxGTP_X1HNsdufWbvyycaxE/edit#heading=h.zgngk9ekm1wf) from community meetings |
+| YouTube | View our [playlist](https://youtube.com/playlist?list=PLLjvkjPNmuZkqtDoGuV-8SkZw6dwmHxF5) of recorded community meetings |
+| Twitter / X | [`@wolfi_os`](https://twitter.com/wolfi_os)   |
+| Slack       | `#apko` channel on [Kubernetes Slack](https://slack.kubernetes.io)  |
+| Forum       | See [GitHub Discussions](https://github.com/orgs/wolfi-dev/discussions) |
+| Fediverse   | [`@wolfi`](https://hachyderm.io/@wolfi) on Hachyderm (crossposting from `toots/` directory)  |
 
 # Get Started
 
