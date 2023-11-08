@@ -4,7 +4,7 @@
 # Wolfi OS
 Wolfi is the first community Linux (un)distribution declaratively built for creating a secure base layer for your containers! 
 
-Wolfi is a community Linux OS designed for the container and cloud-native era. Chainguard started the Wolfi project to enable building [Chainguard Images](https://github.com/chainguard-images), our collection of curated [distroless](https://blog.chainguard.dev/minimal-container-images-towards-a-more-secure-future/) images that meet the requirements of a secure software supply chain. This required a Linux distribution with components at the appropriate granularity and with support for both [glibc](https://www.gnu.org/software/libc/) and [musl](https://www.musl-libc.org/), something that was not yet available in the cloud-native Linux ecosystem.
+Wolfi is a community Linux OS designed for the container and cloud-native era. Chainguard started the Wolfi project to enable building [Chainguard Images](https://github.com/chainguard-images), our collection of curated [distroless](https://blog.chainguard.dev/minimal-container-images-towards-a-more-secure-future/) images that meet the requirements of a secure software supply chain. This required a Linux distribution with components at the appropriate granularity and with support for [glibc](https://www.gnu.org/software/libc/).
 
 Wolfi is a stripped-down distro designed for the cloud-native era. It doesn't have a kernel of its own, instead relying on the environment (such as the container runtime) to provide one. This separation of concerns in Wolfi means it is adaptable to a range of environments.
 
