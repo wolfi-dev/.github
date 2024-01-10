@@ -56,13 +56,12 @@ if __name__ == "__main__":
     main()
 ```
 
-Within the same directory, you can create the Dockerfile. This Dockerfile will set up a new user, `WORKDIR`, and copy relevant files. It will also define the entry point that will be executed when we run this image with `docker run`. We are using the [wolfi-base image](https://github.com/chainguard-images/images/tree/main/images/wolfi-base) to build a Python image from scratch, using Wolfi apks.
+Within the same directory, you can create the Dockerfile. This Dockerfile will set up the `WORKDIR`, and copy relevant files. It will also define the entry point that will be executed when we run this image with `docker run`. We are using the [wolfi-base image](https://github.com/chainguard-images/images/tree/main/images/wolfi-base) to build a Python image from scratch, using Wolfi apks. The final image runs using the unprivileged `nonroot` user.
 
 ```docker
 FROM cgr.dev/chainguard/wolfi-base
 
 ARG version=3.11
-RUN adduser -D nonroot
 WORKDIR /app
 
 RUN apk add python-${version} && chown -R nonroot.nonroot /app/
