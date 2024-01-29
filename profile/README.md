@@ -16,15 +16,11 @@ Wolfi, whose name was inspired by the [world's smallest octopus](https://en.wiki
 - Packages are designed to be granular and independent, to support minimal images
 - Uses the proven and reliable apk package format
 - Fully declarative and reproducible build system
-- Designed to support glibc and musl 
+- Designed to support glibc
 
 ## Where's the Source?
 
-* [bootstrap-stage1](https://github.com/wolfi-dev/bootstrap-stage1) contains the stage1 bootstrap repository which is used with Alpine.
-* [bootstrap-stage2](https://github.com/wolfi-dev/bootstrap-stage2) contains the stage2 bootstrap repository which is used with Alpine and the stage1 toolchain to bootstrap stage3.
-* [bootstrap-stage3](https://github.com/wolfi-dev/bootstrap-stage3) contains the stage3 bootstrap repository which is a micro GNU/Linux distribution built with stage2 and used to bootstrap Wolfi.
 * [os](https://github.com/wolfi-dev/os) contains the core Wolfi OS repository.
-
 
 ## Wolfi Community
 
@@ -32,15 +28,11 @@ The [community repo](https://github.com/wolfi-dev/community) contains full detai
 
 | Resource    | Details, Links, etc. |
 | ----------- | ----------- |
-| Calendar    | Monthly Wolfi Community Call (1st Wednesday of Every Month) |
-| Calendar    | Monthly Wolfi Community Call (1st Wednesday of Every Month) - see [public Google Calendar](https://calendar.google.com/calendar/u/0/embed?src=c_7ec60f485931f9056040a3e24273400de41a143ec60703b411d77b1f534ec15f@group.calendar.google.com) |
 | Notes | View our [notes](https://docs.google.com/document/d/1wBE3W81Xso6BDOU3-tWzfxGTP_X1HNsdufWbvyycaxE/edit#heading=h.zgngk9ekm1wf) from community meetings |
 | YouTube | View our [playlist](https://youtube.com/playlist?list=PLLjvkjPNmuZkqtDoGuV-8SkZw6dwmHxF5) of recorded community meetings |
 | Twitter / X | [`@wolfi_os`](https://twitter.com/wolfi_os)   |
 | Slack       | `#apko` channel on [Kubernetes Slack](https://slack.kubernetes.io)  |
 | Forum       | See [GitHub Discussions](https://github.com/orgs/wolfi-dev/discussions) |
-| Fediverse   | [`@wolfi`](https://hachyderm.io/@wolfi) on Hachyderm (crossposting from `toots/` directory)  |
-
 
 ## Get Started
 
