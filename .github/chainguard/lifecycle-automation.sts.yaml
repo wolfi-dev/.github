@@ -8,6 +8,7 @@ subject_pattern: "(104827825967618219657|106649619308723948792)"
 permissions:
   pull_requests: write
   content: write
+  workflows: write
 
 # Allow for cloning, push, create prs
 repositories:
