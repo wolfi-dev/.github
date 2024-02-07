@@ -1,0 +1,15 @@
+issuer: https://accounts.google.com
+
+# have more than one service account
+# staging-images: apk-scan-generator-sa@staging-images-183e.iam.gserviceaccount.com (104827825967618219657)
+# prod-images: apk-scan-generator-sa@prod-images-c6e5.iam.gserviceaccount.com (106649619308723948792)
+subject_pattern: "(104827825967618219657|106649619308723948792)"
+
+permissions:
+  pull_requests: write
+  content: write
+
+# Allow for cloning, push, create prs
+repositories:
+  - os
+  - advisories
