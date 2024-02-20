@@ -79,7 +79,8 @@ You should receive the following output:
 Hello, Wolfi!
 ```
 
-For more guidance, you can check out a full tutorial on [Creating Wolfi Images with Dockerfiles](https://edu.chainguard.dev/open-source/wolfi/wolfi-with-dockerfiles/), or alternately use apko to build a distroless image with only the packages you need, by revieiwng a [Getting Started with apko](https://edu.chainguard.dev/open-source/apko/getting-started-with-apko/) tutorial.
+For more guidance, you can check out a full tutorial on [Creating Wolfi Images with Dockerfiles](https://edu.chainguard.dev/open-source/wolfi/wolfi-with-dockerfiles/), or alternately use apko to build a distroless image with only the packages you need, by reviewing a [Getting Started with apko](https://edu.chainguard.dev/open-source/apko/getting-started-with-apko/) tutorial.
+
 ## FAQ
 
 ### What is Wolfi and how does it compare to Alpine?
@@ -105,4 +106,3 @@ See [SECURITY.md](/SECURITY.md) for information about reporting security inciden
 
 ### Where can I ask questions or learn more about using Wolfi?
 We have a monthly community call on the 1st Wednesday of every month! Join the next meeting by following Wolfi’s public calendar, or submit your question to our GitHub Community discussions forum. 
-
