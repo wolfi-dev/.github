@@ -12,4 +12,3 @@ permissions:
 repositories:
   - advisories
   - os
-  - enterprise-advisories
