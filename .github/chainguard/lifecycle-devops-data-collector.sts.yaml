@@ -5,8 +5,11 @@ issuer: https://accounts.google.com
 subject: "101826719708554282120"
 
 permissions:
+  actions: read
+  checks: read
   contents: read
   issues: read
+  metadata: read
   pull_requests: read
 
 repositories:
