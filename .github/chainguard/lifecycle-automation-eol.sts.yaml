@@ -10,5 +10,4 @@ permissions:
   workflows: write
 
 repositories:
-  - versions
   - os
