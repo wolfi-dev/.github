@@ -1,0 +1,13 @@
+# Copyright 2024 Chainguard, Inc.
+# SPDX-License-Identifier: Apache-2.0
+
+issuer: https://token.actions.githubusercontent.com
+subject: repo:wolfi-dev/.github:ref:refs/heads/main
+claim_pattern:
+  workflow_ref: wolfi-dev/\.github/\.github/workflows/ghaudit\.yaml@refs/heads/main
+
+permissions:
+  metadata: read
+  administration: read # To list deploy keys
+
+repositories: [] # Act over all of the repos in the org.
