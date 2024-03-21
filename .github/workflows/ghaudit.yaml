@@ -1,0 +1,42 @@
+on:
+  workflow_dispatch:
+  schedule:
+    # Audit repos twice a day.
+    - cron:  '0 0,12 * * *'
+
+name: GitHub Audit
+
+jobs:
+  ghaudit:
+    runs-on: ubuntu-latest
+
+    permissions:
+      id-token: write # To federate with Octo STS
+
+    steps:
+    - uses: octo-sts/action@6177b4481c00308b3839969c3eca88c96a91775f # v1.0.0
+      id: octo-sts
+      with:
+        scope: ${{ github.repository_owner }}
+        identity: ghaudit
+
+    - name: Deploy Keys
+      uses: wolfi-dev/wolfi-act@main
+      env:
+        GH_TOKEN: ${{ steps.octo-sts.outputs.token }}
+      with:
+        packages: ghaudit
+        command: ghaudit org -o ${{ github.repository_owner }} deploy-keys
+
+    - uses: rtCamp/action-slack-notify@4e5fb42d249be6a45a298f3c9543b111b02f7907 # v2.3.0
+      if: ${{ failure() }}
+      env:
+        SLACK_ICON: http://github.com/chainguard-dev.png?size=48
+        SLACK_USERNAME: guardian
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+        SLACK_CHANNEL: '@mattmoor'
+        SLACK_COLOR: '#8E1600'
+        MSG_MINIMAL: 'true'
+        SLACK_TITLE: GitHub Audit of ${{ github.repository_owner }} failed.
+        SLACK_MESSAGE: |
+          For detailed logs: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
