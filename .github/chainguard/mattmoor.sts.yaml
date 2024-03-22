@@ -1,0 +1,15 @@
+# Copyright 2024 Chainguard, Inc.
+# SPDX-License-Identifier: Apache-2.0
+
+issuer: https://issuer.enforce.dev
+subject: 9e8b549b441afc4f082e9dccb5d1eeda843af975 # mattmoor@
+claim_pattern:
+  # Track emails
+  email: .*
+
+permissions:
+  metadata: read
+  administration: read # To list deploy keys
+  secrets: read # To enumerate secret metadata (no values)
+
+repositories: [] # Act over all of the repos in the org.
