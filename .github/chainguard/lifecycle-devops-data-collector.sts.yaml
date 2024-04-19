@@ -1,8 +1,8 @@
 issuer: https://accounts.google.com
 
 # staging-images: not in use
-# prod-images: insights-publisher-sa@prod-images-c6e5.iam.gserviceaccount.com
-subject: "101826719708554282120"
+# prod-images: lifecycle-devops-collector@prod-images-c6e5.iam.gserviceaccount.com
+subject: "109102922315025257155"
 
 permissions:
   actions: read
