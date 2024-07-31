@@ -1,0 +1,16 @@
+# Copyright 2024 Chainguard, Inc.
+# SPDX-License-Identifier: Apache-2.0
+
+issuer: https://issuer.enforce.dev
+subject: 8780e879d683149e4376625574c2b11bc542a27b # egibs@
+claim_pattern:
+  email: .*
+
+permissions:
+  administration: read
+  metadata: read
+  organization_administration: read
+  organization_custom_roles: read
+  organization_projects: read
+
+repositories: []
