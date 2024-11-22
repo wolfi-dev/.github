@@ -1,0 +1,12 @@
+issuer: https://accounts.google.com
+
+# staging-support-tools-2b84: cron-github-label-syncer@staging-support-tools-2b84.iam.gserviceaccount.com
+subject_pattern: "108681969367840005725"
+
+# to be able to write issues and see the repos if is private
+permissions:
+  issues: write
+  pull_requests: write
+  contents: read
+
+repositories: []  # Act over all of the repos in the org.
