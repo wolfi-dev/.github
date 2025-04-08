@@ -1,7 +1,7 @@
 issuer: https://accounts.google.com
 
-# staging-support-tools-2b84: cron-github-label-syncer@staging-support-tools-2b84.iam.gserviceaccount.com
-subject_pattern: "108681969367840005725"
+# internal-tools: cron-github-label-syncer@internal-tools-1ho6.iam.gserviceaccount.com
+subject_pattern: "100141704200657398121"
 
 # to be able to write issues and see the repos if is private
 permissions:
