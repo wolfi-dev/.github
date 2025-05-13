@@ -1,0 +1,18 @@
+issuer: https://token.actions.githubusercontent.com
+subject: repo:chainguard-dev/project-backup:ref:refs/heads/main
+claim_pattern:
+  # Restrict to specific workflow
+  workflow_ref: chainguard-dev/project-backup/.github/workflows/sync-pr-board\.yml@refs/heads/main
+
+permissions:
+  metadata: read
+  contents: read
+  issues: read
+  pull_requests: read
+  repository_projects: read
+  organization_projects: read
+  members: read
+
+repositories:
+  - wolfi-dev/os
+  - wolfi-dev/advisories
