@@ -6,14 +6,22 @@ on:
 
 name: GitHub Audit
 
+permissions: {}
+
 jobs:
   ghaudit:
     runs-on: ubuntu-latest
 
     permissions:
+      contents: read # To read the repo contents
       id-token: write # To federate with Octo STS
 
     steps:
+    - name: Harden the runner (Audit all outbound calls)
+      uses: step-security/harden-runner@0634a2670c59f64b4a01f0f96f84700a4088b9f0 # v2.12.0
+      with:
+        egress-policy: audit
+
     - uses: octo-sts/action@6177b4481c00308b3839969c3eca88c96a91775f # v1.0.0
       id: octo-sts
       with:
@@ -21,7 +29,7 @@ jobs:
         identity: ghaudit
 
     - name: Deploy Keys
-      uses: wolfi-dev/wolfi-act@main
+      uses: wolfi-dev/wolfi-act@d78f3659c50c4520e222df428f4903a1c4b0c6ee # # v0.0.1
       env:
         GH_TOKEN: ${{ steps.octo-sts.outputs.token }}
       with:
@@ -29,7 +37,7 @@ jobs:
         command: ghaudit org -o ${{ github.repository_owner }} deploy-keys
 
     - name: Branch Protections
-      uses: wolfi-dev/wolfi-act@main
+      uses: wolfi-dev/wolfi-act@d78f3659c50c4520e222df428f4903a1c4b0c6ee # # v0.0.1
       env:
         GH_TOKEN: ${{ steps.octo-sts.outputs.token }}
       with:
@@ -37,7 +45,7 @@ jobs:
         command: ghaudit org -o ${{ github.repository_owner }} branch-protections
 
     - name: Default Permissions
-      uses: wolfi-dev/wolfi-act@main
+      uses: wolfi-dev/wolfi-act@d78f3659c50c4520e222df428f4903a1c4b0c6ee # v0.0.1
       env:
         GH_TOKEN: ${{ steps.octo-sts.outputs.token }}
       with:
