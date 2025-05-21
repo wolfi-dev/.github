@@ -1,0 +1,10 @@
+issuer: https://accounts.google.com
+
+# slack-reactor (staging): slack-reactor@staging-enforce-cd1e.iam.gserviceaccount.com
+subject_pattern: "117959345416790619431"
+
+# to be able to read pr status
+permissions:
+  pull_requests: read
+
+repositories: []  # Act over all of the repos in the org.
