@@ -1,58 +1,25 @@
-# Wolfi security information
+# Security Policy
 
-## Reporting security incidents to Wolfi
+## Reporting a Vulnerability
 
-At present, Wolfi's security incidents are handled by the Chainguard security team.
+Thank you for taking the time to disclose a potential security issue.
 
-### Your concern is about CVE scanner results, missing CVE patches, etc.
+Please report vulnerabilities via email to [security@chainguard.dev](mailto:security@chainguard.dev).
 
-**Please note that the bootstrap repositories are unsuitable for production
-use and for the most part do not receive security fixes.
-Security maintenance is only provided for the production repositories.**
+To assist our triage, please include:
+- A clear description of the issue and its potential impact.
+- Steps to reproduce or proof-of-concept if available.
+- Affected versions or commit hashes.
+- Any known mitigations or fixes.
+- How you would like to be credited if attribution is desired (e.g., name, known handle).
 
-Please open an issue in the [os](https://github.com/wolfi-dev/os/issues/new) repository
-against the package which is flagged by a CVE scanner or is missing a CVE patch.
+## Disclosure Policy
 
-These issues will be triaged as normal.
+We are grateful when vulnerabilities are reported to us.
 
-### Your concern is about anything else or otherwise concerns embargoed data
+As a reporter, you can expect:
+- A prompt acknowledgment of your report (within 72 hours).
+- A transparent dialog and timely fix for valid issues.
+- Credit for disclosure, if desired.
 
-Please write to <security@chainguard.dev>, outlining the concern and explicitly note
-that the concern is about Wolfi.
-
-## Retrieving security feeds from Wolfi
-
-Wolfi provides CVE remediation feeds for its production repositories, which may be
-used for any purpose without any royalty, provided that attribution is provided to
-the Wolfi project.
-
-The present feeds offered are:
-
-* [`https://packages.wolfi.dev/os/security.json`](https://packages.wolfi.dev/os/security.json),
-  a feed for the production Wolfi `os` repository.
-
-These feeds contain a list of `package` objects under `packages`, which contain a mapping
-of versions and security issue identifiers (e.g. `CVE-XXXX-YYYYY`).  An example `package`
-object is:
-
-```json
-{
-  "pkg": {
-    "name": "binutils",
-    "secfixes": {
-      "2.39-r1": [
-        "CVE-2022-38126"
-      ],
-      "2.39-r2": [
-        "CVE-2022-38533"
-      ]
-    }
-  }
-}
-```
-
-This format is used across APK distributions, including Alpine and others, so your
-CVE scanning software likely already understands how to ingest them.
-
-Please open any requests for improvement to the security feeds to the [Wolfi
-security database project](https://github.com/wolfi-dev/secdb).
+Please see the full [Chainguard Vulnerability Disclosure Policy](https://www.chainguard.dev/legal/inbound-vulnerability-disclosure-policy) to learn more.
