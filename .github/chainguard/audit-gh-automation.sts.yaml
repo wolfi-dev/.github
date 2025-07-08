@@ -7,6 +7,7 @@ claim_pattern:
   job_workflow_ref: chainguard-dev/infra/.github/workflows/audit-gh-automation.yaml@refs/heads/main
 
 permissions:
+  administration: read # read repository
   members: read # to read GitHub members
   metadata: read # to read metadata about the org
 
