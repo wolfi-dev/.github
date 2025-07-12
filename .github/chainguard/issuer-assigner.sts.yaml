@@ -1,0 +1,10 @@
+issuer: https://accounts.google.com
+# devops-gh-issue-assigner@internal-tools-1ho6.iam.gserviceaccount.com
+subject: "103632985228260696990"
+
+permissions:
+  issues: write # Assign issues
+  pull_requests: write # Assign pull requests
+
+repositories:
+  - os
