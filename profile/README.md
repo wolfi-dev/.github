@@ -86,6 +86,11 @@ Wolfi is a Linux _undistro_  designed from the ground up to support newer comput
 ### Is Wolfi free to use?
 Yes, Wolfi is freely [available under the Apache License V2](https://github.com/wolfi-dev/os/blob/main/LICENSE) and will always be.
 
+### Where are packages in Wolfi published?
+Packages in Wolfi are published to [public Wolfi APK Repositories](https://edu.chainguard.dev/chainguard/chainguard-images/network-requirements/).
+
+Non-latest versions of packages in these repositories are retained for 12 months by default.  For more information, see the [Wolfi Archive Policy announcement](https://github.com/orgs/wolfi-dev/discussions/63023).
+
 ### Can I mix packages from Alpine repositories into a Wolfi-based image? 
 No, it’s not possible to mix Alpine apks with Wolfi apks. If your image requires dependencies that are currently only available for Alpine. You might consider using [melange](https://github.com/chainguard-dev/melange) to build a custom apk for your image.
 
