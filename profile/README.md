@@ -26,7 +26,7 @@ Wolfi, whose name was inspired by the [world's smallest octopus](https://en.wiki
 
 | Resource    | Details |
 | ----------- | ----------- |
-| Slack       | `#apko` channel on [Kubernetes Slack](https://slack.kubernetes.io)  |
+| Slack       | Some community members can be found in the`#apko` channel on [Kubernetes Slack](https://slack.kubernetes.io), but there is no active monitoring of this channel.|
 | Forum       | See [GitHub Discussions](https://github.com/orgs/wolfi-dev/discussions) |
 
 The [community repo](https://github.com/wolfi-dev/community) contains full details of past community calls and resources.
