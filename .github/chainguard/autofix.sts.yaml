@@ -3,6 +3,7 @@ issuer: https://accounts.google.com
 subject: "114301252256317020592"
 
 permissions:
+  actions: read
   checks: write
   contents: write
   pull_requests: read
