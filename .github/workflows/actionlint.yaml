@@ -35,6 +35,6 @@ jobs:
           echo "files=${yamls}" >> "$GITHUB_OUTPUT"
 
       - name: Action lint
-        uses: step-security/action-actionlint@3f6e745e8217d0acefffc87dc5cc4fefc3505207 # v1.66.1
+        uses: step-security/action-actionlint@f8554b90c388f266345bf4d5cc58bc3b2aad8fe5 # v1.67.0
         with:
           actionlint_flags: ${{ steps.get_yamls.outputs.files }}
