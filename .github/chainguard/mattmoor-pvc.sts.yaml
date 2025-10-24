@@ -1,0 +1,12 @@
+issuer: https://accounts.google.com
+
+# pvcpvc@mattmoor-chainguard.iam.gserviceaccount.com
+subject: "114455941305307605059"
+
+permissions:
+  contents: read
+  checks: write
+  pull_requests: read
+
+repositories:
+- os
