@@ -1,0 +1,12 @@
+issuer: https://accounts.google.com
+
+# package-version-check@staging-enforce-cd1e.iam.gserviceaccount.com
+subject: "114701398486030379354"
+
+permissions:
+  contents: read
+  checks: write
+  pull_requests: read
+
+repositories:
+- os
