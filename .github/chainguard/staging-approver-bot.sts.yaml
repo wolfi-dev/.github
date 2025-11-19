@@ -1,0 +1,12 @@
+issuer: https://accounts.google.com
+
+# approver-bot@staging-enforce-cd1e.iam.gserviceaccount.com
+subject: "104099575245879501824"
+
+permissions:
+  contents: read
+  checks: read
+  pull_requests: write
+
+repositories:
+- os
