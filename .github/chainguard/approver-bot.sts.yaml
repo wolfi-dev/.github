@@ -1,0 +1,12 @@
+issuer: https://accounts.google.com
+
+# approver-bot@prod-enforce-fabc.iam.gserviceaccount.com
+subject: "114898805784176589833"
+
+permissions:
+  contents: read
+  checks: read
+  pull_requests: write
+
+repositories:
+- os
