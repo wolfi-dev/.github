@@ -1,0 +1,12 @@
+issuer: https://accounts.google.com
+
+# octo-sts/internal-tools: internal-tools-gh-rt-chk-wolfi@octo-sts.iam.gserviceaccount.com
+subject_pattern: "113689568553746125790"
+
+permissions:
+  contents: read
+
+# limit the scope to only the repositories that are needed
+# this service will just get the rate limit will not perform any actions in the repo
+repositories:
+  - .github
