@@ -1,0 +1,12 @@
+issuer: https://accounts.google.com
+
+# eco-approver-bot@prod-enforce-fabc.iam.gserviceaccount.com
+subject: "106311290198800893234"
+
+permissions:
+  contents: write
+  checks: read
+  pull_requests: write
+
+repositories:
+- ecosystems-packages
