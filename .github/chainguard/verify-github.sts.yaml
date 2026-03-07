@@ -7,6 +7,7 @@ claim_pattern:
   job_workflow_ref: chainguard-dev/infra/.github/workflows/.terraform.yaml@.*
 
 permissions:
+  organization_administration: write # required to read organization rulesets
   administration: read # required to read the repository
   contents: write # required per terraform docs (https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository)
   members: read # to add/remove GitHub members
