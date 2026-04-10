@@ -5,6 +5,8 @@ subject_pattern: "113689568553746125790"
 
 permissions:
   contents: read
+  organization_administration: read
+  organization_api_insights: read
 
 # limit the scope to only the repositories that are needed
 # this service will just get the rate limit will not perform any actions in the repo
