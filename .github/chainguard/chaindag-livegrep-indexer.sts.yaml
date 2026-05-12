@@ -1,0 +1,15 @@
+# Copyright 2026 Chainguard, Inc.
+# SPDX-License-Identifier: Apache-2.0
+
+# Octo STS policy for the livegrep.chaindag.dev indexer.
+# Service account: livegrep@chaindag.iam.gserviceaccount.com
+# Deployed by: env/chaindag.dev/iac/livegrep.tf in chainguard-dev/mono
+
+issuer: https://accounts.google.com
+subject: "106681300217655979572"
+
+permissions:
+  # Clone repository contents for code search indexing
+  contents: read
+  # Required baseline permission for all GitHub API access
+  metadata: read
