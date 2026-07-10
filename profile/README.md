@@ -96,17 +96,26 @@ Packages in Wolfi are published to [public Wolfi APK Repositories](https://edu.c
 
 ### What packages are included in Wolfi?
 
-Wolfi focusses on latest package versions and provides a base minimum of packages for variety of containers. Specifically all packages used in free Chainguard Containers are available as packages.
+Wolfi focuses on latest package versions and provides a base minimum of packages for a variety of containers. Specifically, all packages required to build or run free Chainguard Containers are available as packages in Wolfi.
 
-Non-latest versions of packages in these repositories are retained for 12 months until June 8th, 2026, and then for 6 months by default.
+Non-latest versions of packages in these repositories are retained for 6 months, unless they are required by another package within Wolfi. 
 
-For more information, see the [Wolfi Archive Policy announcement](https://github.com/orgs/wolfi-dev/discussions/63023), the [updated policy announcement](](https://github.com/orgs/wolfi-dev/discussions/78666)), and our [discussions forum in general](https://github.com/orgs/wolfi-dev/discussions).
+For more information, see the [Wolfi Archive Policy announcement](https://github.com/orgs/wolfi-dev/discussions/63023), the [updated policy announcement](https://github.com/orgs/wolfi-dev/discussions/78666), and our [discussions forum in general](https://github.com/orgs/wolfi-dev/discussions).
 
-Chainguard also regularly removes packages from Wolfi for reasons outside the scope of the Wolfi retention policy. Typically, this involves removing the package definition from the Wolfi GitHub repository only. 
+Chainguard regularly stops building packages as part of Wolfi by removing the associated package definitions from [the Wolfi GitHub project](https://github.com/wolfi-dev/os), that is removing the melange.yaml configuration files. Reasons for the removal include the following: 
 
-Existing packages that have already been built remain in the Wolfi binary package repository such as `apk.cgr.dev/chainguard/x86_64` until they are removed according to the retention policy.
+- Upstream software reaches end of life.
+- The package is renamed or refactored to become obsolete.
+- The package is harmful, dangerous, or broken beyond repair.
+- The package affects installing up-to-date versions of other packages.
+- The package is no longer required to build or run free Chainguard Containers (for example, when a new version of a version-streamed package is released).
+- Rarely, other technical or commercial reasons.
 
-The most common trigger for removal is when a new version of a version streamed package is released. In this situation, package definitions for prior versions streams are removed from Wolfi. For example, when MariaDB 13 is released and added to Wolfi, MariaDB 12 is removed from Wolfi. New versions of MariaDB 12 packages are available from Chainguard only as the focus of Wolfi is on latest releases only. 
+For example, when MariaDB 12 was released, the following occurred: 
+- MariaDB 12 package definitions were [added to Wolfi](https://github.com/wolfi-dev/os/pull/61985).
+- MariaDB 11 package definitions were [moved from Wolfi to Chainguard OS enterprise packages](https://github.com/wolfi-dev/os/pull/63060). This means new versions of MariaDB 11 packages are no longer published to public Wolfi APK repositories, since MariaDB 12 is a full, new replacement. MariaDB 11 packages are still maintained and available as part of Chainguard’s commercial catalog.
+- Chainguard’s free MariaDB container image transitioned from MariaDB 11 to MariaDB 12.
+- Existing MariaDB 11 packages in Wolfi APK repositories became stale and were removed according to the Wolfi package retention policy (currently 6 months after initial publication).
 
 ### Can I mix packages from Alpine repositories into a Wolfi-based image?
 
