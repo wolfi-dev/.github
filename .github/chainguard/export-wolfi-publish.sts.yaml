@@ -1,0 +1,9 @@
+# Production OS-2867: replace this nonmatching subject after paused provisioning.
+# Do not merge until the account's numeric uniqueId has been verified and reviewed.
+# Expected account: export-wolfi-publish@prod-enforce-fabc.iam.gserviceaccount.com
+issuer: https://accounts.google.com
+subject: "UNPROVISIONED-export-wolfi-publish-prod-OS-2867"
+repositories:
+  - os
+permissions:
+  contents: write
