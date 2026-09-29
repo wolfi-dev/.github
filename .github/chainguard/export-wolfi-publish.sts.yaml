@@ -1,0 +1,9 @@
+# Production OS-2867: bind the dedicated account by its numeric uniqueId.
+# Re-review this subject if the service account is recreated.
+# Google service account: export-wolfi-publish@prod-enforce-fabc.iam.gserviceaccount.com
+issuer: https://accounts.google.com
+subject: "111686246305885758377"
+repositories:
+  - os
+permissions:
+  contents: write
