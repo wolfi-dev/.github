@@ -1,0 +1,7 @@
+issuer: https://accounts.google.com
+# subject = unique ID of gha-db-sync@security-lake.iam.gserviceaccount.com
+# (the gha-supply-chain ingester's Cloud Run SA; terraform output sweep_sa_unique_id)
+subject: "105279350470920492145"
+permissions:
+  contents: read
+  metadata: read
