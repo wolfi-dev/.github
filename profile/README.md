@@ -78,7 +78,7 @@ You should receive the following output:
 Hello, Wolfi!
 ```
 
-For more guidance, you can check out a full tutorial on [Creating Wolfi Images with Dockerfiles](https://edu.chainguard.dev/open-source/wolfi/wolfi-with-dockerfiles/), or alternately use apko to build a distroless image with only the packages you need, by reviewing a [Getting Started with apko](https://edu.chainguard.dev/open-source/apko/getting-started-with-apko/) tutorial.
+For more guidance, you can check out a full tutorial on [Creating Wolfi Images with Dockerfiles](https://www.chainguard.dev/docs/open-source/wolfi/wolfi-with-dockerfiles), or alternately use apko to build a distroless image with only the packages you need, by reviewing a [Getting Started with apko](https://www.chainguard.dev/docs/open-source/build-tools/apko/getting-started-with-apko) tutorial.
 
 ## FAQ
 
@@ -92,7 +92,7 @@ Yes, Wolfi is freely [available under the Apache License V2](https://github.com/
 
 ### Where are packages in Wolfi published?
 
-Packages in Wolfi are published to [public Wolfi APK Repositories](https://edu.chainguard.dev/chainguard/chainguard-images/network-requirements/).
+Packages in Wolfi are published to [public Wolfi APK Repositories](https://www.chainguard.dev/docs/chainguard/containers/registry/network-requirements).
 
 ### What packages are included in Wolfi?
 
@@ -139,4 +139,4 @@ See [SECURITY.md](/SECURITY.md) for information about reporting security inciden
 
 ### Where can I ask questions or learn more about using Wolfi?
 
-Find details in our [repositories](https://github.com/orgs/wolfi-dev/repositories), use our [community channels](#wolfi-community) and read our [documentation](https://edu.chainguard.dev/open-source/wolfi/overview/).
+Find details in our [repositories](https://github.com/orgs/wolfi-dev/repositories), use our [community channels](#wolfi-community) and read our [documentation](https://www.chainguard.dev/docs/open-source/wolfi).
