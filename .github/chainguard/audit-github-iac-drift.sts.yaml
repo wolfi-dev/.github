@@ -1,0 +1,20 @@
+# Copyright 2026 Chainguard, Inc.
+# SPDX-License-Identifier: Apache-2.0
+
+# Plans of github-iac that compare GitHub with its configuration, from
+# chainguard-dev/infra's audit-github-iac-drift.yaml on main. That workflow has
+# no apply step and writes no plan file.
+issuer: https://token.actions.githubusercontent.com
+subject: repo:chainguard-dev/infra:ref:refs/heads/main
+claim_pattern:
+  job_workflow_ref: chainguard-dev/infra/.github/workflows/audit-github-iac-drift.yaml@refs/heads/main
+
+permissions:
+  administration: write # GitHub returns repository ruleset bypass actors and merge settings only to a writer
+  contents: read # what sync-github's refresh of each repository reads
+  members: read # teams and memberships
+  metadata: read # repository and organization metadata
+  organization_administration: write # GitHub returns organization ruleset bypass actors only to a writer
+  organization_custom_org_roles: read # custom organization roles
+  organization_custom_roles: read # custom repository roles
+repositories: [] # Act over all of the repos in the org.
